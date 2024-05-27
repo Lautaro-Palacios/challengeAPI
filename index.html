@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu archivo CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <a class="navbar-brand" href="index.html">Mi Tienda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="carrito.html">Carrito <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Agrega aquí más elementos de la navbar si es necesario -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="my-4">Categorías</h1>
+        <ul id="categories" class="nav nav-pills mb-4"></ul>
+        
+        <h2 class="my-4">Productos</h2>
+        <div id="products" class="row"></div>
+        
+        <h2 class="my-4">Detalle del Producto</h2>
+        <div id="product-details" class="mb-4" style="display:flexbox;"></div>
+        
+        <h2 class="my-4">Carrito de Compras</h2>
+        <ul id="cart-items" class="list-group mb-2"></ul>
+        <div class="alert alert-info">Total: $<span id="total-price">0</span></div>
+        <div class="alert alert-info">Items en el carrito: <span id="cart-count">0</span></div>
+        <!-- Botón para vaciar el carrito -->
+        <button class="btn btn-danger mb-3" onclick="clearCart()" id="clear-cart-btn">Vaciar Carrito</button>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Tu archivo JavaScript -->
+    <script src="app.js"></script>
+
+    <script>
+        // Agregar evento para el enlace del carrito en la barra de navegación
+        const navbarCartLink = document.getElementById('navbar-cart-link');
+        navbarCartLink.addEventListener('click', () => {
+            displayCart(); // Mostrar el carrito al hacer clic en el enlace del carrito
+        });
+    </script>
+</body>
+</html>

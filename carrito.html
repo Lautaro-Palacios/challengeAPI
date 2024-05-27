@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Agrega estilos personalizados según sea necesario */
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Carrito de Compras</a>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Carrito de Compras</h1>
+        <ul id="cart-items" class="list-group mb-2"></ul>
+        <div class="alert alert-info">Total: $<span id="total-price">0.00</span></div>
+        <div class="alert alert-info">Artículos en el carrito: <span id="cart-count">0</span></div>
+        <button class="btn btn-secondary" onclick="window.location.href = 'index.html';">Volver al Inicio</button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Tu archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
